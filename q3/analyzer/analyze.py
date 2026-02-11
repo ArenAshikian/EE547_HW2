@@ -69,7 +69,6 @@ def build_ngrams(words, n):
 
 
 def jaccard_similarity(doc1_words, doc2_words):
-    """Calculate Jaccard similarity between two documents."""
     set1 = set(doc1_words)
     set2 = set(doc2_words)
     intersection = set1.intersection(set2)
@@ -270,3 +269,4 @@ def main():
 
 if __name__ == "__main__":
     raise SystemExit(main())
+
