@@ -11,12 +11,10 @@ def main():
 
     input_file = "/shared/input/urls.txt"
 
-    # Wait for input file
     while not os.path.exists(input_file):
         print(f"Waiting for {input_file}...", flush=True)
         time.sleep(2)
 
-    # Read URLs (manual loop)
     urls = []
     with open(input_file, "r") as f:
         lines = f.readlines()
@@ -71,7 +69,6 @@ def main():
         time.sleep(1)
         index += 1
 
-    # Build status dictionary line-by-line
     status = {}
     status["timestamp"] = datetime.now(timezone.utc).isoformat()
     status["urls_processed"] = len(urls)
